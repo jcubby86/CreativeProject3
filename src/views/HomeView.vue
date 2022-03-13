@@ -1,18 +1,29 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>My Rubik's Cube Collection</h1>
+    <CubeList :cubes="cubes"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import CubeList from '@/components/CubeList.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
-  }
+    CubeList
+  },
+  computed: {
+    cubes() {
+      return this.$root.$data.cubes;
+    }
+  },
 }
 </script>
+
+<style scoped>
+.home h1 {
+  text-decoration: underline;
+}
+</style>

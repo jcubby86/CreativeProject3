@@ -4,7 +4,12 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
-    <router-view/>
+    <router-view />
+    <div class="footer">
+      <a href="https://github.com/jcubby86/CreativeProject3">
+        <h5>View GitHub Repository here</h5>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -23,10 +28,31 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: black;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: darkblue;
+}
+
+.footer{
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid lightblue 5px;
+    margin-left: -10px;
+}
+.footer a{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.footer a:hover{
+    text-decoration: underline;
 }
 </style>
